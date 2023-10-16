@@ -4,7 +4,7 @@ import { BiSolidUser } from "react-icons/bi";
 const AllUsers = () => {
   return (
     <div>
-      <Link to={"/"} className="px-5 py-3 shadow-lg font-medium ">
+      <Link to={"/createUser"} className="px-5 py-3 shadow-lg font-medium ">
         New User <BiSolidUser className="inline-block ml-2" />
       </Link>
 

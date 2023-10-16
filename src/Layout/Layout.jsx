@@ -8,7 +8,7 @@ const Layout = () => {
                 <h1 className="text-2xl font-bold text-white">User Management System</h1>
             </div>
 
-            <div className="p-10">
+            <div className="py-16 px-24">
                 <Outlet/>
             </div>
             
