@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { IoIosArrowRoundBack } from "react-icons/io";
+import swal from "sweetalert";
 
 const CreateUser = () => {
     const handleSubmit = event => {
@@ -23,6 +24,10 @@ const CreateUser = () => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
+            if(data.insertedId) {
+                swal("Good job!", "You clicked the button!", "success");
+                form.reset();
+            }
         })
     }
   return (
