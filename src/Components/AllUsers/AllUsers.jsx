@@ -1,5 +1,6 @@
 import { Link, useLoaderData } from "react-router-dom";
 import { BiSolidUser } from "react-icons/bi";
+import {MdOutlineModeEditOutline, MdOutlineDelete} from 'react-icons/md'
 
 const AllUsers = () => {
     const loadedUsers =  useLoaderData();
@@ -31,7 +32,10 @@ const AllUsers = () => {
                     <td>{user?.email}</td>
                     <td>{user?.gender}</td>
                     <td>{user?.status}</td>
-                    <td></td>
+                    <td className="flex items-center gap-3">
+                        <button title="Edit user" className="btn btn-sm shadow-md"><MdOutlineModeEditOutline className="text-xl"/></button>
+                        <button title="Delete user" className="btn btn-sm shadow-md"><MdOutlineDelete className="text-xl"/></button>
+                    </td>
                   </tr>)
             }
           </tbody>
